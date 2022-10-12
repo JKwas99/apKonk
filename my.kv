@@ -1,0 +1,166 @@
+Interface:
+<Interface>:
+    ScreenManager:
+        id:sm
+        size: root.width, root.height
+        Screen:
+            name:"log"
+            FloatLayout:
+                size: root.width, root.height
+                Label:
+                    pos:0,400
+                    font_size:50
+                    text: "GET AD"
+                    color: "#3FA796"
+                    size_hint:(1,0.05)
+                MDTextField:
+                    pos:30,300
+                    size_hint: None, None
+                    font_size:20
+                    size: 290, 40
+                    id:login
+                    hint_text:"Wpisz login"
+                    multiline: False
+                    line_color_normal:"#3FA796"
+                    line_color_focus: "#3FA796"
+                MDTextField:
+                    line_color_normal:"#3FA796"
+                    line_color_focus: "#3FA796"
+                    pos:30,220
+                    size_hint: None, None
+                    font_size:20
+                    size: 290, 40
+                    icon_left: 'key-variant'
+                    icon_right: 'eye-off'
+                    id:haslo
+                    max_text_length: 24
+                    hint_text:"Wpisz hasło"
+                    multiline: False
+                    password: True
+                FloatLayout:
+                    size: root.width, root.height
+                    Button:
+                        pos:70,120
+                        background_color: "#3FA796"
+                        background_normal: ''
+                        text:"      Zaloguj Się     "
+                        size_hint: None, None
+                        size: 200, 45
+                        font_size:20
+                        on_release:root.zaloguj(sm)
+                    MDFlatButton:
+                        text:"Nie posiadasz konta? Zarejestruj się!"
+                        size_hint: None, None
+                        theme_text_color: "Custom"
+                        text_color:  "#215c52"
+                        size: 100, 50
+                        font_size: 15
+                        pos:40,70
+                        on_release:root.zmien(sm)
+                Label:
+                    id:blad
+                    text: ""
+                    color: "red"
+                    size_hint:(1,0.1)
+        Screen:
+            size: root.width, root.height
+            name:"rej"
+            FloatLayout:
+                size: root.width, root.height
+                Label:
+                    pos:0,500
+                    font_size:40
+                    text: "REJSTRACAJA"
+                    color: "#3FA796"
+                    size_hint:(1,0.05)
+                MDTextField:
+                    id:Rimie
+                    hint_text:"Imię użytkownika"
+                    multiline: False
+                    pos:30,400
+                    size_hint: None, None
+                    font_size:20
+                    size: 290, 40
+                    line_color_normal:"#3FA796"
+                    line_color_focus: "#3FA796"
+                MDTextField:
+                    id:Rnazwisko
+                    hint_text:"Nazwisko użytkownika"
+                    multiline: False
+                    pos:30,340
+                    size_hint: None, None
+                    font_size:20
+                    size: 290, 40
+                    line_color_normal:"#3FA796"
+                    line_color_focus: "#3FA796"
+                MDTextField:
+                    id:Remail
+                    hint_text:"Adres e-mail"
+                    icon_right: "email"
+                    multiline: False
+                    pos:30,280
+                    size_hint: None, None
+                    font_size:20
+                    size: 290, 40
+                    line_color_normal:"#3FA796"
+                    line_color_focus: "#3FA796"
+                MDTextField:
+                    id:Rhaslo
+                    hint_text:"Hasło użytkownika"
+                    multiline: False
+                    pos:30,220
+                    size_hint: None, None
+                    font_size:20
+                    size: 290, 40
+                    line_color_normal:"#3FA796"
+                    line_color_focus: "#3FA796"
+                MDTextField:
+                    id:Radres
+                    hint_text:"Adres użytkownika"
+                    multiline: False
+                    pos:30,160
+                    size_hint: None, None
+                    font_size:20
+                    size: 290, 40
+                    line_color_normal:"#3FA796"
+                    line_color_focus: "#3FA796"
+                FloatLayout:
+                    size: root.width, root.height
+                    Button:
+                        pos:70,100
+                        background_color: "#3FA796"
+                        background_normal: ''
+                        text:"      Utwórz konto     "
+                        size_hint: None, None
+                        size: 200, 45
+                        font_size:20
+                        on_release:root.zarejestruj(sm)
+                    MDFlatButton:
+                        text:"Posiadasz konto? Zaloguj się!"
+                        size_hint: None, None
+                        theme_text_color: "Custom"
+                        text_color:  "#215c52"
+                        size: 100, 50
+                        font_size: 15
+                        pos:60,50
+                        on_release:root.zmien(sm)
+        Screen:
+            size: root.width, root.height
+            name:"glowna"
+            BoxLayout:
+                orientation: 'vertical'
+                size: root.width, root.height
+
+                Label:
+                    text:"Główna strona"
+                    color:'black'
+
+
+
+
+
+
+
+
+
+
